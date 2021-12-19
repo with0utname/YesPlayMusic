@@ -94,7 +94,10 @@ export default {
   components: { ArtistsInLine, ExplicitSymbol },
 
   props: {
-    trackProp: Object,
+    trackProp: {
+      type: Object,
+      default: () => {},
+    },
     highlightPlayingTrack: {
       type: Boolean,
       default: true,

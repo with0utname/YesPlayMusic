@@ -366,8 +366,8 @@ export default {
       }, 50);
     },
     formatLine(line) {
-      const showLyricsTranslation = this.$store.state.settings
-        .showLyricsTranslation;
+      const showLyricsTranslation =
+        this.$store.state.settings.showLyricsTranslation;
       if (showLyricsTranslation && line.contents[1]) {
         return `<span>${line.contents[0]}<br/>${line.contents[1]}</span>`;
       } else if (line.contents[0] !== undefined) {

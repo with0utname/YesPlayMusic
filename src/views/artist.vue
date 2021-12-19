@@ -127,7 +127,7 @@
     <div v-if="mvs.length !== 0" id="mvs" class="mvs">
       <div class="section-title"
         >MVs
-        <router-link v-show="hasMoreMV" :to="`/artist/${this.artist.id}/mv`">{{
+        <router-link v-show="hasMoreMV" :to="`/artist/${artist.id}/mv`">{{
           $t('home.seeMore')
         }}</router-link>
       </div>

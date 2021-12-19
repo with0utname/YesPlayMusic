@@ -164,13 +164,13 @@ export function initIpcMain(win, store) {
     );
   });
 
-  ipcMain.on('removeProxy', (event, arg) => {
+  ipcMain.on('removeProxy', () => {
     log('removeProxy');
     win.webContents.session.setProxy({});
     store.set('proxy', '');
   });
 
-  ipcMain.on('switchGlobalShortcutStatusTemporary', (e, status) => {
+  ipcMain.on('switchGlobalShortcutStatusTemporary', (_, status) => {
     log('switchGlobalShortcutStatusTemporary');
     if (status === 'disable') {
       globalShortcut.unregisterAll();

@@ -3,7 +3,6 @@ ENV VUE_APP_NETEASE_API_URL=/api
 WORKDIR /app
 RUN apk add --no-cache python3 make g++ git
 COPY package.json yarn.lock ./
-RUN npm install -g yarn
 RUN yarn install
 COPY . .
 RUN yarn build
